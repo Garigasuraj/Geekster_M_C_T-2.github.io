@@ -23,12 +23,14 @@ function init(){
 }
 async function api_call(data){
     if(data!=null){
-        const get_data = await fetch(`https://newsapi.org/v2/everything?q=${data}&from=2023-02-09&too=2023-02-09&sortBy=popularity&apiKey=95c60c7edab840ecb918de6fd099d0b9`)
+        const get_data = await fetch(`
+        https://newsapi.org/v2/everything?q=${data}&from=2023-02-09&too=2023-02-09&sortBy=popularity&apiKey=95c60c7edab840ecb918de6fd099d0b9`)
         const text_data = await get_data.text()
         const res_string = JSON.parse(text_data)
         rendering_data(res_string)
     }else{
-        const get_data = await fetch(`https://newsapi.org/v2/everything?q=general&from=2023-02-09&too=2023-02-09&sortBy=popularity&apiKey=95c60c7edab840ecb918de6fd099d0b9`)
+        const get_data = await fetch(`
+        https://newsapi.org/v2/everything?q=general&from=2023-02-09&too=2023-02-09&sortBy=popularity&apiKey=95c60c7edab840ecb918de6fd099d0b9`)
         const text_data = await get_data.text()
         const res_string = JSON.parse(text_data)
         rendering_data(res_string)
@@ -36,7 +38,7 @@ async function api_call(data){
 }
 function rendering_data(api_data){
     let html = ""
-    for(let i=0; i<api_data.articles.length-50; i++){
+    for(let i=0; i<api_data.articles.length; i++){
         html += `
         <div id="content">
            <div id="image_div">
