@@ -1,0 +1,119 @@
+body{
+    font-family: Roboto,ans-serif;
+}
+#ll{
+    overflow: hidden;
+    width: 650px;
+}
+#bar{
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#side_nav_bar{
+    width: 0px;
+    height: 100%;
+    border: 1px solid black;
+    position: fixed;
+    top: 0px;
+    left: -5px;
+    bottom: 0px;
+    z-index: 5;
+    background-color: rgb(37, 33, 33);
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+.hello{
+    width: 200px;
+}
+#side_nav_bar ul{
+    cursor: pointer;
+    color: white;
+}
+#list_heading{
+    color: white;
+    margin: 15px 45px;
+}
+#del_icon{
+    color: rgb(255, 255, 255);
+    width: 50px;
+    position: absolute;
+    left: 160px;
+    top: 12px;
+    font-size: 28px;
+    cursor: pointer;
+}
+#side_nav_bar ul{
+    height: 30px;
+    width: 130px;
+    margin: 8px 15px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+#side_nav_bar ul:hover{
+    background-color: rgba(166, 170, 170,0.3);
+    border-radius: 4px;
+}
+.nav_bar{
+    text-align: center;
+    position: fixed;
+    top: 0px; left: 0px;
+    right: 0px;
+    background-color: rgb(249, 248, 248);
+    box-shadow: 0px 5px 5px rgba(161, 160, 160,0.3);
+    z-index: 2;
+}
+#app_link{
+    height: 55px;
+    display: flex;
+    margin: 10px 310px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+    box-shadow: 5px 5px 5px rgba(161, 160, 160,0.15);
+    color: white;
+    background-color: rgb(234, 59, 59);
+    margin-bottom: 20px;
+}
+#app_link img{
+    width: 130px;
+}
+#content{
+    height: 285px;
+    display: flex;
+    border: 1px solid rgb(242, 242, 242);
+    margin: 25px 310px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(3, 3, 3, 0.2);
+}
+#content_div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#image_div{
+    width: 265px;
+    height: 265px;
+    margin: 10px 10px;
+    display: flex;
+}
+#heading{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+#author_time{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+#new_info_link{
+    position: absolute;
+    top: 250px;
+    font-size: 13px;
+}
+#link ,#link_1{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
