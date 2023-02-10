@@ -39,7 +39,7 @@ async function api_call(data){
 }
 function rendering_data(api_data){
     let html = ""
-    for(let i=0; i<api_data.articles.length; i++){
+    for(let i=0; i<50; i++){
         html += `
         <div id="content">
            <div id="image_div">
