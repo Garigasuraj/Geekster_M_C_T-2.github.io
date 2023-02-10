@@ -21,6 +21,7 @@ function init(){
     }
     api_call()
 }
+//HELLO WORD
 async function api_call(data){
     if(data!=null){
         const get_data = await fetch(`
