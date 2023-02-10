@@ -1,4 +1,3 @@
-const news_body =  document.getElementById("body")
 const menu_button = document.getElementById("bar")
 const menu = document.getElementById("side_nav_bar")
 
