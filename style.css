@@ -11,6 +11,7 @@ body{
     top: 25px;
     font-size: 20px;
     cursor: pointer;
+    background-blend-mode: darken;
 }
 #side_nav_bar{
     width: 0px;
@@ -25,9 +26,12 @@ body{
     transition: 0.5s;
     overflow-x: hidden;
 }
-.hello{
+/* #side_nav_bar.active{
+    left: -5px;
+} */
+/* .hello{
     width: 200px;
-}
+} */
 #side_nav_bar ul{
     cursor: pointer;
     color: white;
@@ -76,9 +80,25 @@ body{
     color: white;
     background-color: rgb(234, 59, 59);
     margin-bottom: 20px;
+
 }
 #app_link img{
     width: 130px;
+}
+@media screen and (max-width: 1350px){
+    #app_link img{
+        width: 100px;
+    }
+}
+@media screen and (max-width: 1270px){
+    #app_link img{
+        width: 65px;
+    }
+}
+@media screen and (max-width: 805px){
+    #app_link{
+        display: none;
+    }
 }
 #content{
     height: 285px;
@@ -99,21 +119,67 @@ body{
     margin: 10px 10px;
     display: flex;
 }
-#heading{
-    font-size: 25px;
-    margin-bottom: 10px;
+@media screen and (max-width:500px){
+    #image_div{
+        width: 165px;
+        height: 195px;
+        margin: 10px 10px;
+        display: flex;
+    }
+    #image_div img{
+        width: 150px;
+        overflow: hidden;
+    }
+    #content{
+        margin: 25px 5px;
+        width: 470px;
+        height: 220px;
+        position: relative;
+    }
+    #heading{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    #author_time{
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+    #description{
+        font-size: 10px;
+    }
+    #link{
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+    #new_info_link{
+        position: absolute;
+        bottom: 5px;
+    }
+    #new_info_link span,#link_1{
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        font-size: 8px;
+    }
 }
-#author_time{
-    font-size: 12px;
-    margin-bottom: 15px;
-}
-#new_info_link{
-    position: absolute;
-    top: 250px;
-    font-size: 13px;
-}
-#link ,#link_1{
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+@media screen and (min-width:505px){
+    #heading{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    #author_time{
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    #new_info_link{
+        position: absolute;
+        top: 250px;
+        font-size: 13px;
+    }
+    #link ,#link_1{
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
 }

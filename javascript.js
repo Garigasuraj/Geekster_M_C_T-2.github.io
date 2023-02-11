@@ -1,19 +1,31 @@
-const news_body =  document.getElementById("body")
 const menu_button = document.getElementById("bar")
 const menu = document.getElementById("side_nav_bar")
 
 const side_nav_list = document.querySelectorAll("ul")
 const content = document.getElementById("info_content")
-const del_nav = document.getElementById("del_icon")
+// const del_nav = document.getElementById("del_icon")
 
 init()
 function init(){
     menu_button.addEventListener("click",()=>{
         menu.style.width = "200px"
     })
-    del_nav.addEventListener("click",()=>{
+    // del_nav.addEventListener("click",()=>{
+    //     menu.style.width = "0px"
+    // })
+    menu.onmouseleave = ()=>{
         menu.style.width = "0px"
-    })
+    }
+    // menu_button.addEventListener("click",()=>{
+    //     // menu.setAttribute("class","active")
+    //     menu_button.classList.toggle("active")
+    //     menu.classList.toggle("active")
+    // })
+    // document.onclick = (clickEvent)=>{
+    //     if(clickEvent.target.id !== "side_nav_bar"){
+    //         menu.classList.remove("active")
+    //     }
+    // }
     for(let i=0; i<side_nav_list.length; i++){
         side_nav_list[i].addEventListener("click",()=>{
             api_call(side_nav_list[i].innerHTML)
@@ -21,17 +33,14 @@ function init(){
     }
     api_call()
 }
-//HELLO WORD
 async function api_call(data){
     if(data!=null){
-        const get_data = await fetch(`
-        https://newsapi.org/v2/everything?q=${data}&from=2023-02-09&too=2023-02-09&sortBy=popularity&apiKey=95c60c7edab840ecb918de6fd099d0b9`)
+        const get_data = await fetch(`https://newsapi.org/v2/everything?q=${data}&from=2023-02-09&too=2023-02-09&sortBy=popularity&apiKey=95c60c7edab840ecb918de6fd099d0b9`)
         const text_data = await get_data.text()
         const res_string = JSON.parse(text_data)
         rendering_data(res_string)
     }else{
-        const get_data = await fetch(`
-        https://newsapi.org/v2/everything?q=general&from=2023-02-09&too=2023-02-09&sortBy=popularity&apiKey=95c60c7edab840ecb918de6fd099d0b9`)
+        const get_data = await fetch(`https://newsapi.org/v2/everything?q=general&from=2023-02-09&too=2023-02-09&sortBy=popularity&apiKey=95c60c7edab840ecb918de6fd099d0b9`)
         const text_data = await get_data.text()
         const res_string = JSON.parse(text_data)
         rendering_data(res_string)
@@ -57,7 +66,7 @@ function rendering_data(api_data){
             <div id="description">${api_data.articles[i].description}</div>
 
             <div id="new_info_link">
-            Readmore at 
+            <span>Readmore at<span> 
             <span style="font-weight: bold;"><a id="link" href="${api_data.articles[i].url}">${api_data.articles[i].source.name}</a></span></div>
             </div>
         </div>`
