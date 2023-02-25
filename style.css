@@ -1,10 +1,6 @@
 body{
     font-family: Roboto,ans-serif;
 }
-#ll{
-    overflow: hidden;
-    width: 650px;
-}
 #bar{
     position: absolute;
     left: 25px;
@@ -26,12 +22,6 @@ body{
     transition: 0.5s;
     overflow-x: hidden;
 }
-/* #side_nav_bar.active{
-    left: -5px;
-} */
-/* .hello{
-    width: 200px;
-} */
 #side_nav_bar ul{
     cursor: pointer;
     color: white;
@@ -101,7 +91,7 @@ body{
     }
 }
 #content{
-    height: 285px;
+    height: 290px;
     display: flex;
     border: 1px solid rgb(242, 242, 242);
     margin: 25px 310px;
@@ -109,8 +99,8 @@ body{
     box-shadow: 0px 0px 15px rgba(3, 3, 3, 0.2);
 }
 #content_div{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     position: relative;
 }
 #image_div{
@@ -181,5 +171,8 @@ body{
         cursor: pointer;
         text-decoration: none;
         color: black;
+    }
+    .description{
+        overflow-y: hidden;
     }
 }
